@@ -1,0 +1,19 @@
+
+# Hspice Setting
+source /usr/cad/synopsys/CIC/hspice.cshrc
+source /usr/cad/synopsys/CIC/cosmos_scope.cshrc
+setenv HSPICE_DIR /usr/share/synopsys/hspice/cur/hspice
+setenv PATH ${HSPICE_DIR}/bin:${PATH}
+
+setenv LM_LICENSE_FILE 26585@lsncku:$LM_LICENSE_FILE
+setenv LANG zh_TW.UTF-8
+
+#License Queuing option
+setenv META_QUEUE 1
+
+alias setprompt 'set prompt="${user}@`hostname -s`:${cwd:t} >"'
+setprompt # to set the initial prompt 
+alias cd 'chdir \!* && setprompt' 
+alias pushd 'pushd \!* && setprompt' 
+alias popd 'popd \!* && setprompt' 
+
